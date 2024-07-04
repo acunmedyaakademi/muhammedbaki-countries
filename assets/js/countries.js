@@ -22,7 +22,6 @@ function handleCountrieForm() {
   let formData = new FormData(addCountrieForm);
   let formObj = Object.fromEntries(formData);
   addCountrieForm.reset();
-  formObj.population = Number(formObj.population);
 
 
   if (formObj.id !== "") {
