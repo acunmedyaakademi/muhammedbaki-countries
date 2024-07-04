@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="stylesheet" href="assets/css/countries.css">
+  <script src="assets/js/countries.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="countriesHeader">
+      <h1>Ülkeler</h1>
+      <!-- <label class="editorControl">(<input type="checkbox"> editör)</label> -->
+      <button id="addcountrieBtn">Ekle</button>
+    </header>
+
+
+    <div class="countries" id="countriesContainer"></div>
+
+  </div>
+
+  <dialog id="modal">
+    <h2 class="modelAddNew">Ülke Ekle</h2>
+    <h2 class="modelEdit">Ülke Değiştir</h2>
+    <form method="dialog" autocomplete="off" id="addCountrieForm">
+      <p><input required type="text" name="countryName" placeholder="Ülke"></p>
+      <p><input required type="number" name="population" placeholder="Nüfus"></p>
+      <p><input required type="text" name="flag" placeholder="Bayrak"></p>
+      <p><input required type="text" name="famousFood" placeholder="Meşhur Yemeği"></p>
+      <p><input required type="text" name="capitalCity" placeholder="Başkent"></p>
+      <p><button class="modelAddNew">Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button"
+          onclick="addCountrieForm.reset();modal.close();">Vazgeç</button></p>
+      <input type="hidden" name="id" value="">
+    </form>
+  </dialog>
+</body>
+
+</html>
